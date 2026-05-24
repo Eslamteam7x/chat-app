@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.message-bubble {
+  position: relative;
+  max-width: 65%;
+}
+
+.message-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+}
+
+.message-bubble.sent::before {
+  right: -16px;
+  border-left-color: #d9fdd3;
+  border-right: 0;
+}
+
+.dark .message-bubble.sent::before {
+  border-left-color: #005c4b;
+}
+
+.message-bubble.received::before {
+  left: -16px;
+  border-right-color: white;
+  border-left: 0;
+}
+
+.dark .message-bubble.received::before {
+  border-right-color: #202c33;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8696a0;
+  margin: 0 2px;
+}
+
+.typing-dot:nth-child(1) { animation: pulseDot 1.4s infinite 0s; }
+.typing-dot:nth-child(2) { animation: pulseDot 1.4s infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: pulseDot 1.4s infinite 0.4s; }
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.emoji-picker-react {
+  position: absolute !important;
+  bottom: 70px;
+  left: 10px;
+  z-index: 50;
+}
+
+@media (max-width: 640px) {
+  .message-bubble {
+    max-width: 85%;
+  }
+}
+
+.pwa-install-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

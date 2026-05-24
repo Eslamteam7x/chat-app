@@ -1,0 +1,112 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+          950: '#1e1b4b',
+        },
+        whatsapp: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+          950: '#052e16',
+        },
+        dark: {
+          bg: '#111b21',
+          sidebar: '#111b21',
+          chat: '#0b141a',
+          header: '#202c33',
+          input: '#2a3942',
+          bubble: '#005c4b',
+          text: '#e9edef',
+          secondary: '#8696a0',
+          border: '#313d45',
+          hover: '#202c33',
+        },
+        light: {
+          bg: '#efeae2',
+          sidebar: '#ffffff',
+          chat: '#e5ddd5',
+          header: '#f0f2f5',
+          input: '#ffffff',
+          bubble: '#d9fdd3',
+          text: '#111b21',
+          secondary: '#667781',
+          border: '#e9edef',
+          hover: '#f5f6f6',
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.2s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'slide-left': 'slideLeft 0.3s ease-out',
+        'slide-right': 'slideRight 0.3s ease-out',
+        'bounce-in': 'bounceIn 0.3s ease-out',
+        'typing': 'typing 1.4s infinite',
+        'pulse-dot': 'pulseDot 1.4s infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(10px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-10px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        bounceIn: {
+          '0%': { transform: 'scale(0.3)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        typing: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+        pulseDot: {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
