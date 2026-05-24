@@ -11,7 +11,7 @@ import MessageInput from './MessageInput';
 import {
   HiChevronLeft, HiPhone, HiVideoCamera, HiDotsVertical,
   HiSearch, HiPaperClip, HiEmojiHappy, HiMicrophone,
-  HiOutlineTrash, HiOutlinePencil, HiOutlineReply, HiOutlineForward,
+  HiOutlineTrash, HiOutlinePencil, HiOutlineReply,
   HiCheck, HiCheckCircle, HiClock,
 } from 'react-icons/hi';
 import { format } from 'date-fns';

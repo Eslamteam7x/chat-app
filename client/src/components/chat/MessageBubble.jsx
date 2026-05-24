@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Avatar from '@/components/common/Avatar';
 import {
   HiCheck, HiCheckCircle, HiClock,
-  HiOutlineTrash, HiOutlinePencil, HiOutlineReply, HiOutlineForward,
+  HiOutlineTrash, HiOutlinePencil, HiOutlineReply, HiArrowRight,
   HiDownload, HiPlay, HiPause,
 } from 'react-icons/hi';
 import { format } from 'date-fns';
@@ -207,7 +207,7 @@ export default function MessageBubble({ message, isOwn, showAvatar, onReply }) {
               </>
             )}
             <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-dark-hover rounded-full transition-colors" title="Forward">
-              <HiOutlineForward className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+              <HiArrowRight className="w-4 h-4 text-gray-500 dark:text-gray-400" />
             </button>
           </motion.div>
         )}
